@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#c84b31">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Wayuunaiki">
+  <meta name="description" content="Traductor moderno de Español e Inglés a Wayuunaiki con diccionario verificado, pronunciación fonética y asistencia de Inteligencia Artificial.">
+  <title>Wayuunaiki - Traductor y Diccionario</title>
+  
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/jpeg" href="/icons/icon-512.jpg">
+  <link rel="apple-touch-icon" href="/icons/icon-512.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body data-theme="dark">
+  <div class="mobile-wrapper">
+    <!-- Top Bar Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <div class="brand-badge">
+          <img src="/icons/icon-512.jpg" alt="Logo Wayuunaiki" class="app-logo">
+          <div class="brand-text">
+            <h1 class="app-title">Wayuunaiki</h1>
+            <span class="app-subtitle">Traductor & Diccionario</span>
+          </div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="installPwaBtn" class="btn-icon-highlight" title="Instalar App en el Celular" style="display: none;">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"></path>
+          </svg>
+          <span>Instalar</span>
+        </button>
+        <button id="themeToggleBtn" class="btn-icon" aria-label="Cambiar tema">
+          <svg id="moonIcon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="sunIcon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main View Content Area -->
+    <main class="content-container">
+      
+      <!-- TAB 1: TRANSLATOR (Principal) -->
+      <section id="viewTranslator" class="app-view active">
+        <!-- Language Switcher Bar -->
+        <div class="lang-selector-card">
+          <div class="lang-pill" id="sourceLangPill">
+            <span class="lang-label">De:</span>
+            <select id="sourceLangSelect" class="lang-select">
+              <option value="es" selected>Español</option>
+              <option value="en">English</option>
+              <option value="guc">Wayuunaiki</option>
+            </select>
+          </div>
+
+          <button id="swapLangBtn" class="btn-swap" aria-label="Intercambiar idiomas">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M7 16V4M7 4L3 8M7 4l4 4M17 8v12M17 20l4-4M17 20l-4-4"/>
+            </svg>
+          </button>
+
+          <div class="lang-pill" id="targetLangPill">
+            <span class="lang-label">A:</span>
+            <select id="targetLangSelect" class="lang-select">
+              <option value="guc" selected>Wayuunaiki</option>
+              <option value="es">Español</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Grammatical Gender Context Selector (Crucial for Wayuunaiki) -->
+        <div class="gender-context-bar" id="genderBar">
+          <div class="gender-title">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>Género gramatical en Wayuu:</span>
+          </div>
+          <div class="gender-chips">
+            <button class="chip-gender active" data-gender="masc" id="genderMasc">
+              Varón (-shi)
+            </button>
+            <button class="chip-gender" data-gender="fem" id="genderFem">
+              Mujer (-sü)
+            </button>
+            <button class="chip-gender" data-gender="plural" id="genderPlural">
+              Grupo (-shii)
+            </button>
+          </div>
+        </div>
+
+        <!-- Input Translation Box -->
+        <div class="card-input-box">
+          <div class="input-header">
+            <span class="input-tag" id="inputLanguageTag">Español</span>
+            <div class="input-tools">
+              <button id="clearInputBtn" class="tool-btn" title="Limpiar texto" style="display: none;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+          
+          <textarea id="sourceText" class="source-textarea" placeholder="Escribe una palabra o frase... (Ej: ¿Cómo estás?, gracias, agua, tierra)" rows="3"></textarea>
+          
+          <div class="input-footer">
+            <div class="quick-chips-wrapper">
+              <span class="quick-chip" data-phrase="Jamaya pia?">¿Cómo estás?</span>
+              <span class="quick-chip" data-phrase="Anayawatsü">Muchas gracias</span>
+              <span class="quick-chip" data-phrase="Watta'a maalü">Buenos días</span>
+              <span class="quick-chip" data-phrase="wüin">Agua</span>
+              <span class="quick-chip" data-phrase="wayuu">Persona</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons-row">
+          <button id="translateBtn" class="btn-primary">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+            <span>Traducir</span>
+          </button>
+          <button id="aiTranslateBtn" class="btn-secondary" title="Traducir oraciones complejas con Gemini AI">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <span>Modo IA</span>
+          </button>
+        </div>
+
+        <!-- Result Box Card -->
+        <div class="card-result-box" id="resultCard" style="display: none;">
+          <div class="result-header">
+            <div class="result-badge-group">
+              <span class="result-tag" id="targetLanguageTag">Wayuunaiki</span>
+              <span class="engine-badge verified" id="engineBadge">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span id="engineBadgeText">Diccionario Verificado</span>
+              </span>
+            </div>
+            <div class="result-tools">
+              <button id="speakResultBtn" class="tool-btn" title="Escuchar pronunciación">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                  <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                </svg>
+              </button>
+              <button id="copyResultBtn" class="tool-btn" title="Copiar al portapapeles">
+                <svg id="copyIcon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <svg id="copiedIcon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#10b981" stroke-width="2.5" style="display: none;">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="result-body">
+            <div id="resultText" class="result-text"></div>
+            <div id="phoneticContainer" class="phonetic-container">
+              <span class="phonetic-label">Fonética:</span>
+              <span id="phoneticText" class="phonetic-text"></span>
+            </div>
+          </div>
+
+          <!-- Cultural / Grammatical Notes Section -->
+          <div id="contextSection" class="context-card" style="display: none;">
+            <div class="context-header">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Nota cultural y gramatical</span>
+            </div>
+            <p id="contextText" class="context-text"></p>
+          </div>
+
+          <!-- Multiple alternatives or related words -->
+          <div id="alternativesContainer" class="alternatives-box" style="display: none;">
+            <span class="alt-title">Palabras relacionadas:</span>
+            <div id="alternativesList" class="alt-list"></div>
+          </div>
+        </div>
+
+        <!-- Banner for Culture / Daily Word -->
+        <div class="culture-banner" id="dailyWordCard">
+          <div class="culture-banner-decor"></div>
+          <div class="culture-banner-content">
+            <span class="banner-badge">Palabra del día Wayuu</span>
+            <h3 class="banner-word" id="dailyWordTitle">Anayawatsü</h3>
+            <p class="banner-meaning" id="dailyWordMeaning">"Muchas gracias" — Expresión cordial de agradecimiento en la cultura Guajira.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 2: VOCABULARIO (Diccionario Explorador) -->
+      <section id="viewDictionary" class="app-view">
+        <div class="view-header">
+          <h2>Glosario Wayuunaiki</h2>
+          <p>Vocabulario verificado por hablantes y lingüistas de La Guajira.</p>
+        </div>
+
+        <!-- Search input in dictionary -->
+        <div class="search-bar-container">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="vocabSearchInput" class="search-input" placeholder="Buscar palabra en Wayuu, Español o Inglés...">
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="category-scroll-container">
+          <button class="cat-pill active" data-category="all">Todos</button>
+          <button class="cat-pill" data-category="greetings">Saludos</button>
+          <button class="cat-pill" data-category="courtesy">Cortesía</button>
+          <button class="cat-pill" data-category="people">Personas</button>
+          <button class="cat-pill" data-category="family_culture">Familia</button>
+          <button class="cat-pill" data-category="nature">Naturaleza</button>
+          <button class="cat-pill" data-category="animals">Animales</button>
+          <button class="cat-pill" data-category="food">Comida</button>
+          <button class="cat-pill" data-category="actions">Verbos</button>
+          <button class="cat-pill" data-category="colors">Colores</button>
+          <button class="cat-pill" data-category="numbers">Números</button>
+        </div>
+
+        <!-- Dictionary Cards List -->
+        <div id="vocabListContainer" class="vocab-cards-grid">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+      <!-- TAB 3: NUMEROS (Conversor interactivo) -->
+      <section id="viewNumbers" class="app-view">
+        <div class="view-header">
+          <h2>Números en Wayuunaiki</h2>
+          <p>El sistema numérico wayuu es decimal y vigesimal. Ingresa cualquier número para aprender su escritura.</p>
+        </div>
+
+        <div class="number-converter-card">
+          <label for="numberInput" class="converter-label">Ingresa un número (1 al 100):</label>
+          <div class="number-input-row">
+            <input type="number" id="numberInput" class="num-input" value="7" min="1" max="100">
+            <button id="convertNumberBtn" class="btn-primary-small">Convertir</button>
+          </div>
+
+          <div class="number-result-box">
+            <span class="num-display-digit" id="numResultDigit">7</span>
+            <h3 class="num-display-word" id="numResultWord">Akaraishi</h3>
+            <span class="num-display-phonetic" id="numResultPhonetic">Pronunciación: [a-ka-rai-shi]</span>
+            <button id="speakNumberBtn" class="tool-btn-inline">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+              <span>Escuchar</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="number-table-card">
+          <h3>Tabla Fundamental (1 al 10)</h3>
+          <div class="number-grid-fast">
+            <div class="num-grid-item" data-num="1"><span class="n-val">1</span> <span class="n-wayuu">Waneshi</span></div>
+            <div class="num-grid-item" data-num="2"><span class="n-val">2</span> <span class="n-wayuu">Piama</span></div>
+            <div class="num-grid-item" data-num="3"><span class="n-val">3</span> <span class="n-wayuu">Apünüin</span></div>
+            <div class="num-grid-item" data-num="4"><span class="n-val">4</span> <span class="n-wayuu">Pienchi</span></div>
+            <div class="num-grid-item" data-num="5"><span class="n-val">5</span> <span class="n-wayuu">Jarai</span></div>
+            <div class="num-grid-item" data-num="6"><span class="n-val">6</span> <span class="n-wayuu">Aippirua</span></div>
+            <div class="num-grid-item" data-num="7"><span class="n-val">7</span> <span class="n-wayuu">Akaraishi</span></div>
+            <div class="num-grid-item" data-num="8"><span class="n-val">8</span> <span class="n-wayuu">Mekiisat</span></div>
+            <div class="num-grid-item" data-num="9"><span class="n-val">9</span> <span class="n-wayuu">Makkirai</span></div>
+            <div class="num-grid-item" data-num="10"><span class="n-val">10</span> <span class="n-wayuu">Poloo</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TAB 4: GUIA Y FONETICA (Cultura y Gramática) -->
+      <section id="viewGrammar" class="app-view">
+        <div class="view-header">
+          <h2>Guía Fonética y Gramatical</h2>
+          <p>Comprende las claves del Alfabeto Único Wayuu (ALAWAY) y sus estructuras esenciales.</p>
+        </div>
+
+        <div class="grammar-card">
+          <div class="grammar-badge">Vocal Central Especial</div>
+          <h3>La letra 'ü' [ɨ]</h3>
+          <p>No es la "u" con diéresis del español. En Wayuunaiki, la <strong>ü</strong> es una vocal central alta no redondeada. Se pronuncia colocando la lengua en posición de "i", pero sin mover los labios hacia adelante, produciendo un sonido gutural limpio.</p>
+          <div class="example-quote">
+            <em>Ejemplo:</em> <strong>Wüin</strong> (Agua), <strong>Jierü</strong> (Mujer), <strong>Tepichi</strong>.
+          </div>
+        </div>
+
+        <div class="grammar-card">
+          <div class="grammar-badge">Pausa Glotal</div>
+          <h3>El Saltillo ' (Glottal Stop)</h3>
+          <p>El apóstrofe marca una interrupción momentánea del flujo de aire en la glotis, similar a la pausa en la exclamación "¡uh-oh!". Separa sílabas o vocales geminadas.</p>
+          <div class="example-quote">
+            <em>Ejemplo:</em> <strong>Ka'i</strong> (Sol/Día), <strong>Paa'a</strong> (Vaca), <strong>Pütchipü'ü</strong> (Palabrero).
+          </div>
+        </div>
+
+        <div class="grammar-card">
+          <div class="grammar-badge">Concordancia Obligatoria</div>
+          <h3>El Sistema de Género Masculino / Femenino</h3>
+          <p>En Wayuunaiki no existe una tercera persona neutra ni una terminación universal para adjetivos o saludos. Quien habla y a quien se habla define la terminación:</p>
+          <ul class="grammar-list">
+            <li><strong>-shi:</strong> Masculino singular (<em>Anashi nia</em> = Él está bien; <em>Antüshi pia</em> = Bienvenido).</li>
+            <li><strong>-sü:</strong> Femenino singular e inanimado (<em>Anasü shia</em> = Ella está bien; <em>Antüsü pia</em> = Bienvenida).</li>
+            <li><strong>-shii:</strong> Plural (<em>Anashii naya</em> = Ellos están bien; <em>Antüshii jia</em> = Bienvenidos).</li>
+          </ul>
+        </div>
+
+        <div class="grammar-card">
+          <div class="grammar-badge">Patrimonio de la Humanidad</div>
+          <h3>El Pütchipü'ü (Palabrero Wayuu)</h3>
+          <p>La institución tradicional de resolución pacífica de conflictos de los Wayuu mediante la palabra dialogada. Reconocido por la UNESCO como Patrimonio Inmaterial de la Humanidad.</p>
+        </div>
+      </section>
+
+      <!-- TAB 5: AJUSTES Y CONFIGURACION (Configuración Gemini & Wi-Fi) -->
+      <section id="viewSettings" class="app-view">
+        <div class="view-header">
+          <h2>Configuración y Conexión</h2>
+          <p>Configura la Inteligencia Artificial y comparte la aplicación con tu teléfono móvil.</p>
+        </div>
+
+        <!-- Phone connection instructions -->
+        <div class="settings-card highlight-card">
+          <div class="settings-card-header">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+            <div>
+              <h3>Enlace Público Seguro (HTTPS)</h3>
+              <p>Funciona desde cualquier teléfono sin configurar redes locales ni IPs privadas:</p>
+            </div>
+          </div>
+          <div class="ip-display-box">
+            <code id="mobileUrlDisplay">https://bible-approaches-ability-gospel.trycloudflare.com</code>
+            <button id="copyIpBtn" class="btn-copy-small">Copiar</button>
+          </div>
+          <div style="text-align: center; margin: 12px 0;">
+            <img src="/icons/qr_code.png" alt="Código QR de instalación móvil" style="width: 180px; height: 180px; border-radius: 12px; border: 2px solid var(--accent-turquoise);">
+            <p style="font-size: 0.78rem; color: var(--text-secondary); margin-top: 6px;">Escanea este código con la cámara de tu celular</p>
+          </div>
+          <p class="install-tip">
+            💡 <strong>En tu celular:</strong> Al abrir este enlace HTTPS en Chrome o Safari, el navegador mostrará automáticamente la opción <strong>"Instalar aplicación"</strong> para descargarla en tu pantalla principal como una app nativa.
+          </p>
+        </div>
+
+        <!-- Gemini API Key configuration -->
+        <div class="settings-card">
+          <div class="settings-card-header">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <div>
+              <h3>Clave de API de Gemini (Opcional)</h3>
+              <p>Habilita la traducción de oraciones largas y complejas mediante IA.</p>
+            </div>
+          </div>
+          <div class="settings-input-group">
+            <input type="password" id="geminiApiKeyInput" class="settings-input" placeholder="Pega tu GEMINI_API_KEY aquí...">
+            <button id="saveApiKeyBtn" class="btn-primary-small">Guardar</button>
+          </div>
+          <div class="api-status-row">
+            <span id="apiStatusBadge" class="status-indicator inactive"></span>
+            <span id="apiStatusText" class="status-desc">Modo Offline Activo (Diccionario local verificado)</span>
+          </div>
+          <small class="api-help">Puedes obtener una clave gratuita en <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">Google AI Studio</a>.</small>
+        </div>
+
+        <!-- App Info -->
+        <div class="settings-card">
+          <h3>Sobre este Proyecto</h3>
+          <p class="info-p">
+            <strong>Wayuunaiki Translator & Dictionary</strong> ha sido concebido para la preservación, aprendizaje y difusión del idioma del pueblo Wayuu en Colombia y Venezuela.
+          </p>
+          <p class="info-p">
+            Combina corpus léxico verificado con Inteligencia Artificial generativa para salvar la brecha digital de lenguas originarias.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Bottom Navigation Bar (Native mobile look & feel) -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-view="viewTranslator" aria-label="Traductor">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+        <span>Traductor</span>
+      </button>
+
+      <button class="nav-item" data-view="viewDictionary" aria-label="Glosario">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+        </svg>
+        <span>Glosario</span>
+      </button>
+
+      <button class="nav-item" data-view="viewNumbers" aria-label="Números">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="4" y1="9" x2="20" y2="9"></line>
+          <line x1="4" y1="15" x2="20" y2="15"></line>
+          <line x1="10" y1="3" x2="8" y2="21"></line>
+          <line x1="16" y1="3" x2="14" y2="21"></line>
+        </svg>
+        <span>Números</span>
+      </button>
+
+      <button class="nav-item" data-view="viewGrammar" aria-label="Guía Wayuu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <span>Guía</span>
+      </button>
+
+      <button class="nav-item" data-view="viewSettings" aria-label="Ajustes">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+        </svg>
+        <span>Ajustes</span>
+      </button>
+    </nav>
+  </div>
+
+  <div id="toastNotification" class="toast-box"></div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

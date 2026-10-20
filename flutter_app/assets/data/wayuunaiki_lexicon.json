@@ -1,0 +1,1289 @@
+{
+  "language_info": {
+    "name": "Wayuunaiki",
+    "autonym": "Wayuunaiki",
+    "iso_639_3": "guc",
+    "family": "Arawakan (Maipuran)",
+    "alphabet_standard": "ALAWAY (Alfabeto Único Wayuu - 1984)",
+    "vowels": [
+      "a",
+      "e",
+      "i",
+      "o",
+      "u",
+      "ü"
+    ],
+    "vowel_note": "'ü' represents the high central unrounded vowel [ɨ], similar to a closed 'i' produced further back.",
+    "long_vowels": [
+      "aa",
+      "ee",
+      "ii",
+      "oo",
+      "uu",
+      "üü"
+    ],
+    "glottal_stop": "' (saltillo, a brief glottal pause)",
+    "grammar_basics": {
+      "word_order": "Predominantly VSO (Verb-Subject-Object), also SVO in discourse.",
+      "gender_system": "Masculine (-shi / -tshi) vs Feminine (-sü / -tsü) / Plural (-shii / -tshii).",
+      "pronominal_prefixes": {
+        "1s": "ta- (yo / my)",
+        "2s": "pü- / pi- (tú / your)",
+        "3s_masc": "nü- / ni- (él / his)",
+        "3s_fem": "sü- / si- (ella / her)",
+        "1p": "wa- (nosotros / our)",
+        "2p": "jü- / ji- (ustedes / your)",
+        "3p": "na- (ellos, ellas / their)"
+      }
+    }
+  },
+  "phrases": [
+    {
+      "id": "phrase_dame_agua",
+      "wayuunaiki": "Paashaja tamüin wüin",
+      "spanish": "Dame agua / Regálame agua",
+      "english": "Give me water",
+      "phonetic": "Paa-sha-ha ta-müin wüin",
+      "context": "Petición vital en el territorio de La Guajira.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_tengo_sed",
+      "wayuunaiki": "Miapüsü taya",
+      "spanish": "Tengo sed",
+      "english": "I am thirsty",
+      "phonetic": "Mya-pü-sü ta-ya",
+      "context": "Expresión de necesidad de agua (wüin).",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_tengo_hambre",
+      "wayuunaiki": "Jamüsü taya",
+      "spanish": "Tengo hambre",
+      "english": "I am hungry",
+      "phonetic": "Ha-mü-sü ta-ya",
+      "context": "Expresión de necesidad de alimento.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_donde_vives",
+      "wayuunaiki": "¿Jala pümiirua?",
+      "spanish": "¿Dónde vives? / ¿Dónde está tu casa?",
+      "english": "Where do you live?",
+      "phonetic": "Ha-la pü-mii-ru-a?",
+      "context": "Pregunta sobre la ranchería o vivienda.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_de_donde_eres",
+      "wayuunaiki": "¿Jalaje'ewai pia?",
+      "spanish": "¿De dónde eres tú?",
+      "english": "Where are you from?",
+      "phonetic": "Ha-la-he-e-wai pya?",
+      "context": "Pregunta sobre el origen territorial o comunidad.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_mi_nombre_es",
+      "wayuunaiki": "Tanülia shia...",
+      "spanish": "Mi nombre es...",
+      "english": "My name is...",
+      "phonetic": "Ta-nü-lya shy-a...",
+      "context": "Fórmula para decir el nombre propio.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_como_te_llamas",
+      "wayuunaiki": "¿Kasa pünülia?",
+      "spanish": "¿Cómo te llamas? / ¿Cuál es tu nombre?",
+      "english": "What is your name?",
+      "phonetic": "Ka-sa pü-nü-lya?",
+      "context": "Pregunta cordial para presentarse.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_te_amo",
+      "wayuunaiki": "Aisü pia tapüla",
+      "spanish": "Te amo / Te quiero",
+      "english": "I love you",
+      "phonetic": "Ai-sü pya ta-pü-la",
+      "context": "Expresión profunda de afecto y cariño en el alma wayuu.",
+      "category": "affection"
+    },
+    {
+      "id": "phrase_por_favor",
+      "wayuunaiki": "Püsülaja tamüin",
+      "spanish": "Por favor",
+      "english": "Please",
+      "phonetic": "Pü-sü-la-ha ta-müin",
+      "context": "Petición respetuosa.",
+      "category": "courtesy"
+    },
+    {
+      "id": "phrase_muy_bien",
+      "wayuunaiki": "Anashaanashi taya",
+      "spanish": "Muy bien / Excelente",
+      "english": "Very well / Excellent",
+      "phonetic": "A-na-shaa-na-shi ta-ya",
+      "context": "El infijo -shaana- intensifica la cualidad (muy bueno/excelente).",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_bien",
+      "wayuunaiki": "Anashi taya",
+      "spanish": "Bien / Estoy bien",
+      "english": "Fine / I am fine",
+      "phonetic": "A-na-shi ta-ya",
+      "context": "Hombre: Anashi taya. Mujer: Anasü taya.",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_chao",
+      "wayuunaiki": "Ounushi taya",
+      "spanish": "Chao / Ya me voy",
+      "english": "Bye / I am leaving",
+      "phonetic": "Ou-nu-shi ta-ya",
+      "context": "Despedida informal para hombre (Ounushi taya) o mujer (Ounusü taya).",
+      "category": "courtesy"
+    },
+    {
+      "id": "phrase_adios",
+      "wayuunaiki": "Ateetshii waya waneemüin",
+      "spanish": "Adiós / Hasta luego / Nos vemos",
+      "english": "Goodbye / See you later",
+      "phonetic": "A-teet-shii wa-ya wa-nee-müin",
+      "context": "Despedida fraternal que augura un pronto reencuentro.",
+      "category": "courtesy"
+    },
+    {
+      "id": "phrase_de_nada",
+      "wayuunaiki": "Nnojo kasa",
+      "spanish": "De nada / No hay de qué",
+      "english": "You are welcome / No problem",
+      "phonetic": "Nno-ho ka-sa",
+      "context": "Literalmente significa 'no es nada', respuesta cordial al agradecimiento.",
+      "category": "courtesy"
+    },
+    {
+      "id": "phrase_hola_todos",
+      "wayuunaiki": "¿Jamüshii jia?",
+      "spanish": "Hola a todos / ¿Cómo están ustedes?",
+      "english": "Hello everyone / How are you all?",
+      "phonetic": "Ha-mü-shii hya?",
+      "context": "Saludo a varias personas.",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_hola_amigo",
+      "wayuunaiki": "Jamaya pia, tatünajutshi",
+      "spanish": "Hola amigo",
+      "english": "Hello friend",
+      "phonetic": "Ha-ma-ya pya, ta-tü-na-hut-shi",
+      "context": "Saludo cordial a un amigo varón. Para mujer se usa: Jamaya pia, tatünajutsü.",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_hola",
+      "wayuunaiki": "Jamaya pia?",
+      "spanish": "Hola / ¿Cómo estás?",
+      "english": "Hello / Hi / How are you?",
+      "phonetic": "Ha-ma-ya pya?",
+      "context": "El saludo más común y tradicional en Wayuunaiki para saludar a una persona.",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_001",
+      "wayuunaiki": "Jamaya pia?",
+      "spanish": "¿Cómo estás?",
+      "english": "How are you? (to one person)",
+      "phonetic": "Ha-ma-ya pya?",
+      "context": "Saludo general e informal a una persona.",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_002",
+      "wayuunaiki": "¿Jamüshii jia?",
+      "spanish": "¿Cómo están ustedes?",
+      "english": "How are you all?",
+      "phonetic": "Ha-mü-shii hya?",
+      "context": "Saludo plural a varias personas.",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_003",
+      "wayuunaiki": "Antüshi pia",
+      "spanish": "Bienvenido (a un hombre)",
+      "english": "Welcome (to a man)",
+      "phonetic": "An-tü-shi pya",
+      "context": "Saludo de llegada cuando quien llega es varón (sufijo -shi).",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_004",
+      "wayuunaiki": "Antüsü pia",
+      "spanish": "Bienvenida (a una mujer)",
+      "english": "Welcome (to a woman)",
+      "phonetic": "An-tü-sü pya",
+      "context": "Saludo de llegada cuando quien llega es mujer (sufijo -sü).",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_005",
+      "wayuunaiki": "Antüshii jia",
+      "spanish": "Bienvenidos (a un grupo)",
+      "english": "Welcome (to a group)",
+      "phonetic": "An-tü-shii hya",
+      "context": "Saludo de llegada para varias personas (sufijo plural -shii).",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_006",
+      "wayuunaiki": "Anashi taya",
+      "spanish": "Estoy bien (dicho por hombre)",
+      "english": "I am fine (spoken by male)",
+      "phonetic": "A-na-shi ta-ya",
+      "context": "Respuesta al saludo 'Jamaya pia?' dicha por un hombre.",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_007",
+      "wayuunaiki": "Anasü taya",
+      "spanish": "Estoy bien (dicho por mujer)",
+      "english": "I am fine (spoken by female)",
+      "phonetic": "A-na-sü ta-ya",
+      "context": "Respuesta al saludo 'Jamaya pia?' dicha por una mujer.",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_008",
+      "wayuunaiki": "Anashii waya",
+      "spanish": "Estamos bien",
+      "english": "We are fine",
+      "phonetic": "A-na-shii wa-ya",
+      "context": "Respuesta colectiva.",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_009",
+      "wayuunaiki": "Anayawatsü",
+      "spanish": "Muchas gracias",
+      "english": "Thank you very much",
+      "phonetic": "A-na-ya-wat-sü",
+      "context": "Agradecimiento cordial y formal.",
+      "category": "courtesy"
+    },
+    {
+      "id": "phrase_010",
+      "wayuunaiki": "Analü",
+      "spanish": "Gracias",
+      "english": "Thank you",
+      "phonetic": "A-na-lü",
+      "context": "Agradecimiento común y cotidiano.",
+      "category": "courtesy"
+    },
+    {
+      "id": "phrase_011",
+      "wayuunaiki": "Watta'a maalü",
+      "spanish": "Buenos días / Hasta mañana",
+      "english": "Good morning / Until tomorrow",
+      "phonetic": "Wat-ta-a ma-a-lü",
+      "context": "Literalmente 'en la mañana de mañana' o amanecer.",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_012",
+      "wayuunaiki": "Aliika",
+      "spanish": "Buenas tardes",
+      "english": "Good afternoon",
+      "phonetic": "A-lii-ka",
+      "context": "Saludo durante el transcurso de la tarde.",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_013",
+      "wayuunaiki": "Aipa'a",
+      "spanish": "Buenas noches",
+      "english": "Good evening / Good night",
+      "phonetic": "Ai-pa-'a",
+      "context": "Saludo o despedida al caer la noche.",
+      "category": "greetings"
+    },
+    {
+      "id": "phrase_014",
+      "wayuunaiki": "Ounushi taya",
+      "spanish": "Ya me voy / Me despido (hombre)",
+      "english": "I am leaving / Goodbye (male)",
+      "phonetic": "Ou-nu-shi ta-ya",
+      "context": "Despedida usada por un hombre.",
+      "category": "courtesy"
+    },
+    {
+      "id": "phrase_015",
+      "wayuunaiki": "Ounusü taya",
+      "spanish": "Ya me voy / Me despido (mujer)",
+      "english": "I am leaving / Goodbye (female)",
+      "phonetic": "Ou-nu-sü ta-ya",
+      "context": "Despedida usada por una mujer.",
+      "category": "courtesy"
+    },
+    {
+      "id": "phrase_016",
+      "wayuunaiki": "Ateetshii waya waneemüin",
+      "spanish": "Hasta luego / Nos volveremos a ver",
+      "english": "See you later / We will meet again",
+      "phonetic": "A-teet-shii wa-ya wa-nee-müin",
+      "context": "Despedida fraternal indicando reencuentro.",
+      "category": "courtesy"
+    },
+    {
+      "id": "phrase_017",
+      "wayuunaiki": "Aa",
+      "spanish": "Sí",
+      "english": "Yes",
+      "phonetic": "A-a",
+      "context": "Afirmación estándar.",
+      "category": "courtesy"
+    },
+    {
+      "id": "phrase_018",
+      "wayuunaiki": "Nnojo",
+      "spanish": "No",
+      "english": "No",
+      "phonetic": "Nno-ho",
+      "context": "Negación general.",
+      "category": "courtesy"
+    },
+    {
+      "id": "phrase_019",
+      "wayuunaiki": "¿Kasa püshia?",
+      "spanish": "¿Qué dijiste? / ¿Qué dices?",
+      "english": "What did you say?",
+      "phonetic": "Ka-sa pü-shya?",
+      "context": "Preguntar cuando no se entendió o se pide repetición.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_020",
+      "wayuunaiki": "¿Jarai pia?",
+      "spanish": "¿Quién eres tú? (a hombre)",
+      "english": "Who are you? (to a man)",
+      "phonetic": "Ha-rai pya?",
+      "context": "Pregunta de identidad a un varón.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_021",
+      "wayuunaiki": "¿Jaralü pia?",
+      "spanish": "¿Quién eres tú? (a mujer)",
+      "english": "Who are you? (to a woman)",
+      "phonetic": "Ha-ra-lü pya?",
+      "context": "Pregunta de identidad a una mujer.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_022",
+      "wayuunaiki": "¿Kasa pünülia?",
+      "spanish": "¿Cuál es tu nombre?",
+      "english": "What is your name?",
+      "phonetic": "Ka-sa pü-nü-lya?",
+      "context": "Pregunta cordial para conocer el nombre de alguien.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_023",
+      "wayuunaiki": "Tanülia shia...",
+      "spanish": "Mi nombre es...",
+      "english": "My name is...",
+      "phonetic": "Ta-nü-lya shy-a...",
+      "context": "Fórmula para presentarse.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_024",
+      "wayuunaiki": "¿Jalashi pia?",
+      "spanish": "¿Dónde estás? (a hombre)",
+      "english": "Where are you? (to a man)",
+      "phonetic": "Ha-la-shi pya?",
+      "context": "Ubicación dirigida a varón.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_025",
+      "wayuunaiki": "¿Jalasü pia?",
+      "spanish": "¿Dónde estás? (a mujer)",
+      "english": "Where are you? (to a woman)",
+      "phonetic": "Ha-la-sü pya?",
+      "context": "Ubicación dirigida a mujer.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_026",
+      "wayuunaiki": "Kettaasü",
+      "spanish": "Listo / Terminado",
+      "english": "Ready / Finished / Done",
+      "phonetic": "Ket-ta-a-sü",
+      "context": "Indica conclusión de una acción o labor.",
+      "category": "conversation"
+    },
+    {
+      "id": "phrase_027",
+      "wayuunaiki": "Püsülaja tamüin",
+      "spanish": "Por favor regálame / concédeme",
+      "english": "Please give me / grant me",
+      "phonetic": "Pü-sü-la-ha ta-müin",
+      "context": "Petición respetuosa.",
+      "category": "courtesy"
+    },
+    {
+      "id": "phrase_028",
+      "wayuunaiki": "Aisü pia tapüla",
+      "spanish": "Te quiero / Te amo",
+      "english": "I love you / I cherish you",
+      "phonetic": "Ai-sü pya ta-pü-la",
+      "context": "Expresión profunda de afecto.",
+      "category": "affection"
+    }
+  ],
+  "vocabulary": [
+    {
+      "wayuunaiki": "naya",
+      "spanish": "ellos, ellas",
+      "english": "they, them",
+      "phonetic": "na-ya",
+      "type": "pronombre",
+      "category": "grammar"
+    },
+    {
+      "wayuunaiki": "jia",
+      "spanish": "ustedes, vosotros",
+      "english": "you all, you",
+      "phonetic": "hya",
+      "type": "pronombre",
+      "category": "grammar"
+    },
+    {
+      "wayuunaiki": "waya",
+      "spanish": "nosotros, a nosotros",
+      "english": "we, us",
+      "phonetic": "wa-ya",
+      "type": "pronombre",
+      "category": "grammar"
+    },
+    {
+      "wayuunaiki": "shia",
+      "spanish": "ella, a ella",
+      "english": "she, her",
+      "phonetic": "shy-a",
+      "type": "pronombre",
+      "category": "grammar"
+    },
+    {
+      "wayuunaiki": "nia",
+      "spanish": "él, a él",
+      "english": "he, him",
+      "phonetic": "nya",
+      "type": "pronombre",
+      "category": "grammar"
+    },
+    {
+      "wayuunaiki": "pia",
+      "spanish": "tú, a ti, usted",
+      "english": "you",
+      "phonetic": "pya",
+      "type": "pronombre",
+      "category": "grammar"
+    },
+    {
+      "wayuunaiki": "taya",
+      "spanish": "yo, a mí",
+      "english": "I, me",
+      "phonetic": "ta-ya",
+      "type": "pronombre",
+      "category": "grammar"
+    },
+    {
+      "wayuunaiki": "talatshii",
+      "spanish": "felices, alegres (grupo)",
+      "english": "happy (plural)",
+      "phonetic": "ta-lat-shii",
+      "type": "adjetivo",
+      "category": "attributes"
+    },
+    {
+      "wayuunaiki": "talatsü",
+      "spanish": "feliz, alegre, contenta (mujer)",
+      "english": "happy, joyful (female)",
+      "phonetic": "ta-lat-sü",
+      "type": "adjetivo",
+      "category": "attributes"
+    },
+    {
+      "wayuunaiki": "talatshi",
+      "spanish": "feliz, alegre, contento (hombre)",
+      "english": "happy, joyful (male)",
+      "phonetic": "ta-lat-shi",
+      "type": "adjetivo",
+      "category": "attributes"
+    },
+    {
+      "wayuunaiki": "maleiwa",
+      "spanish": "Dios, creador, ser supremo",
+      "english": "God, creator",
+      "phonetic": "ma-lei-wa",
+      "type": "sustantivo",
+      "category": "culture"
+    },
+    {
+      "wayuunaiki": "nneerü",
+      "spanish": "dinero, plata",
+      "english": "money",
+      "phonetic": "nnee-rü",
+      "type": "sustantivo",
+      "category": "general"
+    },
+    {
+      "wayuunaiki": "asirü",
+      "spanish": "carne fresca",
+      "english": "meat, fresh meat",
+      "phonetic": "a-si-rü",
+      "type": "sustantivo",
+      "category": "food"
+    },
+    {
+      "wayuunaiki": "eküülü",
+      "spanish": "comida, alimento",
+      "english": "food, meal",
+      "phonetic": "e-küü-lü",
+      "type": "sustantivo",
+      "category": "food"
+    },
+    {
+      "wayuunaiki": "tatüshi",
+      "spanish": "abuelo, mi abuelo",
+      "english": "grandfather, my grandfather",
+      "phonetic": "ta-tü-shi",
+      "type": "sustantivo",
+      "category": "family_culture"
+    },
+    {
+      "wayuunaiki": "alaüla",
+      "spanish": "tío materno, tío, autoridad tradicional",
+      "english": "maternal uncle, traditional authority",
+      "phonetic": "a-la-ü-la",
+      "type": "sustantivo",
+      "category": "family_culture"
+    },
+    {
+      "wayuunaiki": "apüshii",
+      "spanish": "familia, parientes maternos, clan",
+      "english": "family, matrilineal clan, relatives",
+      "phonetic": "a-pü-shii",
+      "type": "sustantivo",
+      "category": "family_culture"
+    },
+    {
+      "wayuunaiki": "aleewaa",
+      "spanish": "amigo, amistad, aliado",
+      "english": "friend, friendship, ally",
+      "phonetic": "a-lee-waa",
+      "type": "sustantivo",
+      "category": "people"
+    },
+    {
+      "wayuunaiki": "atünajutsü",
+      "spanish": "amiga, compañera (mujer)",
+      "english": "friend (female)",
+      "phonetic": "a-tü-na-hut-sü",
+      "type": "sustantivo",
+      "category": "people"
+    },
+    {
+      "wayuunaiki": "atünajutshi",
+      "spanish": "amigo, compañero (varón)",
+      "english": "friend (male)",
+      "phonetic": "a-tü-na-hut-shi",
+      "type": "sustantivo",
+      "category": "people"
+    },
+    {
+      "wayuunaiki": "jamaya",
+      "spanish": "hola, saludos, cómo estás",
+      "english": "hello, hi, greetings",
+      "phonetic": "ha-ma-ya",
+      "type": "saludo",
+      "category": "greetings"
+    },
+    {
+      "wayuunaiki": "wayuu",
+      "spanish": "persona, ser humano, persona wayuu",
+      "english": "person, human being, Wayuu person",
+      "phonetic": "wa-yuu",
+      "type": "sustantivo",
+      "category": "people"
+    },
+    {
+      "wayuunaiki": "alijuna",
+      "spanish": "persona no indígena, forastero, civilizado",
+      "english": "non-indigenous person, outsider, foreigner",
+      "phonetic": "a-li-hu-na",
+      "type": "sustantivo",
+      "category": "people"
+    },
+    {
+      "wayuunaiki": "jierü",
+      "spanish": "mujer",
+      "english": "woman",
+      "phonetic": "hye-rü",
+      "type": "sustantivo",
+      "category": "people"
+    },
+    {
+      "wayuunaiki": "jieyuu",
+      "spanish": "mujeres",
+      "english": "women",
+      "phonetic": "hye-yuu",
+      "type": "sustantivo",
+      "category": "people"
+    },
+    {
+      "wayuunaiki": "tolü",
+      "spanish": "hombre, varón",
+      "english": "man, male",
+      "phonetic": "to-lü",
+      "type": "sustantivo",
+      "category": "people"
+    },
+    {
+      "wayuunaiki": "tolüyuu",
+      "spanish": "hombres",
+      "english": "men",
+      "phonetic": "to-lü-yuu",
+      "type": "sustantivo",
+      "category": "people"
+    },
+    {
+      "wayuunaiki": "tepichi",
+      "spanish": "niño, niña",
+      "english": "child, kid",
+      "phonetic": "te-pi-chi",
+      "type": "sustantivo",
+      "category": "people"
+    },
+    {
+      "wayuunaiki": "laülaa",
+      "spanish": "anciano, tío materno, mayor, autoridad",
+      "english": "elder, maternal uncle, traditional authority",
+      "phonetic": "la-ü-la-a",
+      "type": "sustantivo",
+      "category": "family_culture"
+    },
+    {
+      "wayuunaiki": "toushi",
+      "spanish": "mi abuela paterna",
+      "english": "my paternal grandmother",
+      "phonetic": "tou-shi",
+      "type": "sustantivo",
+      "category": "family_culture"
+    },
+    {
+      "wayuunaiki": "teirü",
+      "spanish": "mi madre",
+      "english": "my mother",
+      "phonetic": "tei-rü",
+      "type": "sustantivo",
+      "category": "family_culture"
+    },
+    {
+      "wayuunaiki": "tashi",
+      "spanish": "mi padre",
+      "english": "my father",
+      "phonetic": "ta-shi",
+      "type": "sustantivo",
+      "category": "family_culture"
+    },
+    {
+      "wayuunaiki": "tawala",
+      "spanish": "mi hermano / mi hermana",
+      "english": "my sibling, my brother, my sister",
+      "phonetic": "ta-wa-la",
+      "type": "sustantivo",
+      "category": "family_culture"
+    },
+    {
+      "wayuunaiki": "tachon",
+      "spanish": "mi hijo / mi hija",
+      "english": "my child, my son, my daughter",
+      "phonetic": "ta-chon",
+      "type": "sustantivo",
+      "category": "family_culture"
+    },
+    {
+      "wayuunaiki": "pütchipü'ü",
+      "spanish": "palabrero (mediador de paz tradicional)",
+      "english": "word messenger, traditional peace mediator / orator",
+      "phonetic": "püt-chi-pü-'ü",
+      "type": "sustantivo",
+      "category": "culture"
+    },
+    {
+      "wayuunaiki": "ouutsü",
+      "spanish": "médica tradicional, chamana, curandera",
+      "english": "traditional healer, shamaness",
+      "phonetic": "ou-ut-sü",
+      "type": "sustantivo",
+      "category": "culture"
+    },
+    {
+      "wayuunaiki": "mma",
+      "spanish": "tierra, territorio, patria, suelo",
+      "english": "earth, land, ground, territory",
+      "phonetic": "mma",
+      "type": "sustantivo",
+      "category": "nature"
+    },
+    {
+      "wayuunaiki": "wüin",
+      "spanish": "agua",
+      "english": "water",
+      "phonetic": "wüin",
+      "type": "sustantivo",
+      "category": "nature"
+    },
+    {
+      "wayuunaiki": "siki",
+      "spanish": "fuego, leña",
+      "english": "fire, firewood",
+      "phonetic": "si-ki",
+      "type": "sustantivo",
+      "category": "nature"
+    },
+    {
+      "wayuunaiki": "jouktai",
+      "spanish": "viento, brisa",
+      "english": "wind, breeze",
+      "phonetic": "houk-tai",
+      "type": "sustantivo",
+      "category": "nature"
+    },
+    {
+      "wayuunaiki": "ka'i",
+      "spanish": "sol, día",
+      "english": "sun, day",
+      "phonetic": "ka-'i",
+      "type": "sustantivo",
+      "category": "nature_time"
+    },
+    {
+      "wayuunaiki": "kashi",
+      "spanish": "luna, mes",
+      "english": "moon, month",
+      "phonetic": "ka-shi",
+      "type": "sustantivo",
+      "category": "nature_time"
+    },
+    {
+      "wayuunaiki": "shiliwala",
+      "spanish": "estrella",
+      "english": "star",
+      "phonetic": "shi-li-wa-la",
+      "type": "sustantivo",
+      "category": "nature"
+    },
+    {
+      "wayuunaiki": "juya",
+      "spanish": "lluvia, invierno, año",
+      "english": "rain, rainy season, year",
+      "phonetic": "hu-ya",
+      "type": "sustantivo",
+      "category": "nature"
+    },
+    {
+      "wayuunaiki": "palaa",
+      "spanish": "mar, océano",
+      "english": "sea, ocean",
+      "phonetic": "pa-la-a",
+      "type": "sustantivo",
+      "category": "nature"
+    },
+    {
+      "wayuunaiki": "uuchi",
+      "spanish": "cerro, monte, montaña",
+      "english": "mountain, hill",
+      "phonetic": "uu-chi",
+      "type": "sustantivo",
+      "category": "nature"
+    },
+    {
+      "wayuunaiki": "jasai",
+      "spanish": "arena, desierto",
+      "english": "sand, desert",
+      "phonetic": "ha-sai",
+      "type": "sustantivo",
+      "category": "nature"
+    },
+    {
+      "wayuunaiki": "miichi",
+      "spanish": "casa, hogar, vivienda",
+      "english": "house, home",
+      "phonetic": "mii-chi",
+      "type": "sustantivo",
+      "category": "home"
+    },
+    {
+      "wayuunaiki": "süi",
+      "spanish": "chinchorro, hamaca tradicional",
+      "english": "woven hammock (chinchorro)",
+      "phonetic": "süi",
+      "type": "sustantivo",
+      "category": "home_culture"
+    },
+    {
+      "wayuunaiki": "amüchi",
+      "spanish": "múcura, tinaja de barro para agua",
+      "english": "clay pot, water urn",
+      "phonetic": "a-mü-chi",
+      "type": "sustantivo",
+      "category": "home_culture"
+    },
+    {
+      "wayuunaiki": "kannaasü",
+      "spanish": "diseño geométrico tradicional del tejido wayuu",
+      "english": "traditional geometric weaving pattern / art",
+      "phonetic": "kan-na-a-sü",
+      "type": "sustantivo",
+      "category": "culture"
+    },
+    {
+      "wayuunaiki": "susu",
+      "spanish": "mochila wayuu tejida",
+      "english": "woven Wayuu bag, mochila",
+      "phonetic": "su-su",
+      "type": "sustantivo",
+      "category": "culture"
+    },
+    {
+      "wayuunaiki": "yonna",
+      "spanish": "danza tradicional wayuu",
+      "english": "traditional Wayuu dance (Chichamaya)",
+      "phonetic": "yon-na",
+      "type": "sustantivo",
+      "category": "culture"
+    },
+    {
+      "wayuunaiki": "kasha",
+      "spanish": "tambor tradicional para la yonna",
+      "english": "traditional drum",
+      "phonetic": "ka-sha",
+      "type": "sustantivo",
+      "category": "culture"
+    },
+    {
+      "wayuunaiki": "katsüin",
+      "spanish": "fuerte, fuerza",
+      "english": "strong, strength",
+      "phonetic": "kat-süin",
+      "type": "adjetivo/sustantivo",
+      "category": "attributes"
+    },
+    {
+      "wayuunaiki": "anashi",
+      "spanish": "bueno, bello, sano (masculino)",
+      "english": "good, handsome, healthy (masculine)",
+      "phonetic": "a-na-shi",
+      "type": "adjetivo",
+      "category": "attributes"
+    },
+    {
+      "wayuunaiki": "anasü",
+      "spanish": "buena, bella, sana (femenino)",
+      "english": "good, beautiful, healthy (feminine)",
+      "phonetic": "a-na-sü",
+      "type": "adjetivo",
+      "category": "attributes"
+    },
+    {
+      "wayuunaiki": "mojoshi",
+      "spanish": "malo, feo, enfermo (masculino)",
+      "english": "bad, ugly, sick (masculine)",
+      "phonetic": "mo-ho-shi",
+      "type": "adjetivo",
+      "category": "attributes"
+    },
+    {
+      "wayuunaiki": "mojosü",
+      "spanish": "mala, fea, enferma (femenino)",
+      "english": "bad, ugly, sick (feminine)",
+      "phonetic": "mo-ho-sü",
+      "type": "adjetivo",
+      "category": "attributes"
+    },
+    {
+      "wayuunaiki": "miyo'u",
+      "spanish": "grande, adulto",
+      "english": "big, large, grown",
+      "phonetic": "mi-yo-'u",
+      "type": "adjetivo",
+      "category": "attributes"
+    },
+    {
+      "wayuunaiki": "motto'u",
+      "spanish": "pequeño, chico",
+      "english": "small, little",
+      "phonetic": "mot-to-'u",
+      "type": "adjetivo",
+      "category": "attributes"
+    },
+    {
+      "wayuunaiki": "ekawaa",
+      "spanish": "comer",
+      "english": "to eat",
+      "phonetic": "e-ka-wa-a",
+      "type": "verbo",
+      "category": "actions"
+    },
+    {
+      "wayuunaiki": "asawaa",
+      "spanish": "beber, tomar",
+      "english": "to drink",
+      "phonetic": "a-sa-wa-a",
+      "type": "verbo",
+      "category": "actions"
+    },
+    {
+      "wayuunaiki": "atunkaa",
+      "spanish": "dormir",
+      "english": "to sleep",
+      "phonetic": "a-tun-ka-a",
+      "type": "verbo",
+      "category": "actions"
+    },
+    {
+      "wayuunaiki": "ayatawaa",
+      "spanish": "trabajar",
+      "english": "to work",
+      "phonetic": "a-ya-ta-wa-a",
+      "type": "verbo",
+      "category": "actions"
+    },
+    {
+      "wayuunaiki": "ashajawaa",
+      "spanish": "escribir",
+      "english": "to write",
+      "phonetic": "a-sha-ha-wa-a",
+      "type": "verbo",
+      "category": "actions"
+    },
+    {
+      "wayuunaiki": "aashajawaa",
+      "spanish": "hablar, conversar",
+      "english": "to speak, talk",
+      "phonetic": "a-a-sha-ha-wa-a",
+      "type": "verbo",
+      "category": "actions"
+    },
+    {
+      "wayuunaiki": "eerajaa",
+      "spanish": "mirar, observar",
+      "english": "to look, watch",
+      "phonetic": "ee-ra-ha-a",
+      "type": "verbo",
+      "category": "actions"
+    },
+    {
+      "wayuunaiki": "eikajaa",
+      "spanish": "enseñar",
+      "english": "to teach",
+      "phonetic": "ei-ka-ha-a",
+      "type": "verbo",
+      "category": "actions"
+    },
+    {
+      "wayuunaiki": "ayaawataa",
+      "spanish": "aprender, comprender, entender",
+      "english": "to learn, understand",
+      "phonetic": "a-yaa-wa-taa",
+      "type": "verbo",
+      "category": "actions"
+    },
+    {
+      "wayuunaiki": "anukaa",
+      "spanish": "caminar, andar",
+      "english": "to walk",
+      "phonetic": "a-nu-ka-a",
+      "type": "verbo",
+      "category": "actions"
+    },
+    {
+      "wayuunaiki": "ounaa",
+      "spanish": "ir, partir",
+      "english": "to go, leave",
+      "phonetic": "ou-na-a",
+      "type": "verbo",
+      "category": "actions"
+    },
+    {
+      "wayuunaiki": "antaa",
+      "spanish": "llegar, venir",
+      "english": "to arrive, come",
+      "phonetic": "an-ta-a",
+      "type": "verbo",
+      "category": "actions"
+    },
+    {
+      "wayuunaiki": "katünkaa",
+      "spanish": "volar",
+      "english": "to fly",
+      "phonetic": "ka-tün-ka-a",
+      "type": "verbo",
+      "category": "actions"
+    },
+    {
+      "wayuunaiki": "paa'a",
+      "spanish": "vaca, ganado vacuno",
+      "english": "cow, cattle",
+      "phonetic": "pa-a-'a",
+      "type": "sustantivo",
+      "category": "animals"
+    },
+    {
+      "wayuunaiki": "kaula",
+      "spanish": "cabra, chivo",
+      "english": "goat",
+      "phonetic": "kau-la",
+      "type": "sustantivo",
+      "category": "animals"
+    },
+    {
+      "wayuunaiki": "anneerü",
+      "spanish": "oveja, carnero",
+      "english": "sheep",
+      "phonetic": "an-nee-rü",
+      "type": "sustantivo",
+      "category": "animals"
+    },
+    {
+      "wayuunaiki": "ama",
+      "spanish": "caballo",
+      "english": "horse",
+      "phonetic": "a-ma",
+      "type": "sustantivo",
+      "category": "animals"
+    },
+    {
+      "wayuunaiki": "burrinko",
+      "spanish": "burro, asno",
+      "english": "donkey",
+      "phonetic": "bur-rin-ko",
+      "type": "sustantivo",
+      "category": "animals"
+    },
+    {
+      "wayuunaiki": "erü",
+      "spanish": "perro",
+      "english": "dog",
+      "phonetic": "e-rü",
+      "type": "sustantivo",
+      "category": "animals"
+    },
+    {
+      "wayuunaiki": "musa",
+      "spanish": "gato",
+      "english": "cat",
+      "phonetic": "mu-sa",
+      "type": "sustantivo",
+      "category": "animals"
+    },
+    {
+      "wayuunaiki": "wuchii",
+      "spanish": "pájaro, ave",
+      "english": "bird",
+      "phonetic": "wu-chii",
+      "type": "sustantivo",
+      "category": "animals"
+    },
+    {
+      "wayuunaiki": "jime",
+      "spanish": "pez, pescado",
+      "english": "fish",
+      "phonetic": "hi-me",
+      "type": "sustantivo",
+      "category": "animals_food"
+    },
+    {
+      "wayuunaiki": "asipala",
+      "spanish": "chivo asado (comida tradicional)",
+      "english": "roasted goat (traditional dish)",
+      "phonetic": "a-si-pa-la",
+      "type": "sustantivo",
+      "category": "food"
+    },
+    {
+      "wayuunaiki": "ujolu",
+      "spanish": "chicha de maíz fermentada",
+      "english": "fermented corn beverage (chicha)",
+      "phonetic": "u-ho-lu",
+      "type": "sustantivo",
+      "category": "food"
+    },
+    {
+      "wayuunaiki": "maiki",
+      "spanish": "maíz",
+      "english": "corn, maize",
+      "phonetic": "mai-ki",
+      "type": "sustantivo",
+      "category": "food"
+    },
+    {
+      "wayuunaiki": "aliita",
+      "spanish": "auyama, calabaza",
+      "english": "squash, pumpkin",
+      "phonetic": "a-lii-ta",
+      "type": "sustantivo",
+      "category": "food"
+    },
+    {
+      "wayuunaiki": "ichii",
+      "spanish": "sal",
+      "english": "salt",
+      "phonetic": "i-chii",
+      "type": "sustantivo",
+      "category": "food"
+    },
+    {
+      "wayuunaiki": "waneshi",
+      "spanish": "uno (1)",
+      "english": "one (1)",
+      "phonetic": "wa-ne-shi",
+      "type": "número",
+      "category": "numbers"
+    },
+    {
+      "wayuunaiki": "piama",
+      "spanish": "dos (2)",
+      "english": "two (2)",
+      "phonetic": "pya-ma",
+      "type": "número",
+      "category": "numbers"
+    },
+    {
+      "wayuunaiki": "apünüin",
+      "spanish": "tres (3)",
+      "english": "three (3)",
+      "phonetic": "a-pü-nüin",
+      "type": "número",
+      "category": "numbers"
+    },
+    {
+      "wayuunaiki": "pienchi",
+      "spanish": "cuatro (4)",
+      "english": "four (4)",
+      "phonetic": "pyen-chi",
+      "type": "número",
+      "category": "numbers"
+    },
+    {
+      "wayuunaiki": "jarai",
+      "spanish": "cinco (5)",
+      "english": "five (5)",
+      "phonetic": "ha-rai",
+      "type": "número",
+      "category": "numbers"
+    },
+    {
+      "wayuunaiki": "aippirua",
+      "spanish": "seis (6)",
+      "english": "six (6)",
+      "phonetic": "aip-pi-ru-a",
+      "type": "número",
+      "category": "numbers"
+    },
+    {
+      "wayuunaiki": "akaraishi",
+      "spanish": "siete (7)",
+      "english": "seven (7)",
+      "phonetic": "a-ka-rai-shi",
+      "type": "número",
+      "category": "numbers"
+    },
+    {
+      "wayuunaiki": "mekiisat",
+      "spanish": "ocho (8)",
+      "english": "eight (8)",
+      "phonetic": "me-kii-sat",
+      "type": "número",
+      "category": "numbers"
+    },
+    {
+      "wayuunaiki": "makkirai",
+      "spanish": "nueve (9)",
+      "english": "nine (9)",
+      "phonetic": "mak-ki-rai",
+      "type": "número",
+      "category": "numbers"
+    },
+    {
+      "wayuunaiki": "poloo",
+      "spanish": "diez (10)",
+      "english": "ten (10)",
+      "phonetic": "po-loo",
+      "type": "número",
+      "category": "numbers"
+    },
+    {
+      "wayuunaiki": "poloo waneemüin",
+      "spanish": "once (11)",
+      "english": "eleven (11)",
+      "phonetic": "po-loo wa-nee-müin",
+      "type": "número",
+      "category": "numbers"
+    },
+    {
+      "wayuunaiki": "piama polooshii",
+      "spanish": "veinte (20)",
+      "english": "twenty (20)",
+      "phonetic": "pya-ma po-loo-shii",
+      "type": "número",
+      "category": "numbers"
+    },
+    {
+      "wayuunaiki": "wuran",
+      "spanish": "blanco",
+      "english": "white",
+      "phonetic": "wu-ran",
+      "type": "color",
+      "category": "colors"
+    },
+    {
+      "wayuunaiki": "motsona",
+      "spanish": "negro",
+      "english": "black",
+      "phonetic": "mot-so-na",
+      "type": "color",
+      "category": "colors"
+    },
+    {
+      "wayuunaiki": "ishosü",
+      "spanish": "rojo, roja",
+      "english": "red",
+      "phonetic": "i-sho-sü",
+      "type": "color",
+      "category": "colors"
+    },
+    {
+      "wayuunaiki": "wuitüsü",
+      "spanish": "verde, azul",
+      "english": "green, blue (color of vegetation or sea)",
+      "phonetic": "wui-tü-sü",
+      "type": "color",
+      "category": "colors"
+    },
+    {
+      "wayuunaiki": "maro'ula",
+      "spanish": "amarillo",
+      "english": "yellow",
+      "phonetic": "ma-ro-'u-la",
+      "type": "color",
+      "category": "colors"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Wayuunaiki Translator & Dictionary",
+  "short_name": "Wayuunaiki",
+  "description": "Traductor de Español e Inglés a Wayuunaiki con diccionario verificado y asistente inteligente.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d131f",
+  "theme_color": "#c84b31",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-512.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}
