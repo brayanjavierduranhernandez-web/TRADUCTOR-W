@@ -292,6 +292,117 @@ function setupTranslationEvents() {
       speakWayuu(text, phonetic);
     });
   }
+
+  // Voice Input (Speech-to-Text / Hablar para traducir)
+  setupSpeechRecognition(sourceText, clearInputBtn);
+}
+
+// Speech-to-Text Voice Recognition Engine
+function setupSpeechRecognition(sourceText, clearInputBtn) {
+  const micBtn = document.getElementById('micBtn');
+  const micStatusBar = document.getElementById('micStatusBar');
+
+  const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SpeechRecognition) {
+    if (micBtn) {
+      micBtn.addEventListener('click', () => {
+        showToast('Tu navegador no soporta reconocimiento de voz nativo. Te sugerimos usar Google Chrome, Edge o Safari.');
+      });
+    }
+    return;
+  }
+
+  let recognition = null;
+  let isListening = false;
+
+  try {
+    recognition = new SpeechRecognition();
+    recognition.continuous = false;
+    recognition.interimResults = true;
+    recognition.maxAlternatives = 1;
+
+    function getRecognitionLang() {
+      if (AppState.sourceLang === 'en') return 'en-US';
+      if (AppState.sourceLang === 'es') return 'es-CO'; // Spanish (Colombia)
+      return 'es-CO';
+    }
+
+    recognition.onstart = () => {
+      isListening = true;
+      if (micBtn) micBtn.classList.add('recording');
+      if (micStatusBar) micStatusBar.style.display = 'flex';
+      showToast('🎙️ Escuchando... Habla ahora');
+    };
+
+    recognition.onresult = (event) => {
+      let interimTranscript = '';
+      let finalTranscript = '';
+
+      for (let i = event.resultIndex; i < event.results.length; ++i) {
+        if (event.results[i].isFinal) {
+          finalTranscript += event.results[i][0].transcript;
+        } else {
+          interimTranscript += event.results[i][0].transcript;
+        }
+      }
+
+      const speechResult = (finalTranscript || interimTranscript).trim();
+      if (speechResult) {
+        sourceText.value = speechResult;
+        if (clearInputBtn) clearInputBtn.style.display = 'block';
+        // Real-time automatic translation as the user speaks!
+        performOfflineTranslation(false);
+      }
+    };
+
+    recognition.onerror = (event) => {
+      console.warn('Speech recognition error:', event.error);
+      if (event.error === 'not-allowed') {
+        showToast('⚠️ Permiso de micrófono no otorgado. Habilítalo en tu navegador.');
+      } else if (event.error !== 'no-speech') {
+        showToast(`Error al escuchar: ${event.error}`);
+      }
+      stopListening();
+    };
+
+    recognition.onend = () => {
+      stopListening();
+      if (sourceText.value.trim()) {
+        performOfflineTranslation(false);
+      }
+    };
+
+    function startListening() {
+      recognition.lang = getRecognitionLang();
+      try {
+        recognition.start();
+      } catch (err) {
+        console.warn('Recognition start error:', err);
+      }
+    }
+
+    function stopListening() {
+      isListening = false;
+      if (micBtn) micBtn.classList.remove('recording');
+      if (micStatusBar) micStatusBar.style.display = 'none';
+      try {
+        recognition.stop();
+      } catch (err) {}
+    }
+
+    if (micBtn) {
+      micBtn.addEventListener('click', () => {
+        if (isListening) {
+          stopListening();
+          showToast('Micrófono pausado');
+        } else {
+          startListening();
+        }
+      });
+    }
+  } catch (err) {
+    console.error('Failed to initialize SpeechRecognition:', err);
+  }
 }
 
 function updateLanguageTags() {
